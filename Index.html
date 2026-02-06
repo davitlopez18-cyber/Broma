@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema</title>
+  <style>
+    body {
+      background:black;
+      color:red;
+      font-family:monospace;
+      text-align:center;
+      margin-top:30%;
+    }
+    h1 { font-size:40px; }
+  </style>
+</head>
+<body>
+
+<h1>⚠ SISTEMA ⚠</h1>
+<p>Acceso no autorizado detectado</p>
+<h1 id="contador">10</h1>
+
+<script>
+let t = 10;
+let c = document.getElementById("contador");
+
+let i = setInterval(() => {
+  t--;
+  c.innerHTML = t;
+  if (t === 0) {
+    clearInterval(i);
+    document.body.innerHTML =
+      "<h1 style='color:lime'>💀 HAS SIDO HACKEADO 💀</h1>";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
